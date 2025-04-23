@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-chatbot-kit-chat-container {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.react-chatbot-kit-chat-message-container {
+  background: #f6f6f6;
+}
+
+.react-chatbot-kit-user-chat-message {
+  background: #008a20;
+  color: white;
+  margin-left: auto;
+}
+
+.image-step {
+  clip-path: path(
+    "M0,0 L0,150 L80,150 Q85,150 90,145 Q95,140 95,135 L95,75 Q95,70 98,67 Q101,64 105,63 L150,63 Q155,63 160,58 Q165,53 165,48 L165,0 L1000,0 L1000,1000 L0,1000 Z"
+  );
+}

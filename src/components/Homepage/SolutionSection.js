@@ -1,0 +1,177 @@
+"use client";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
+function SolutionSection() {
+  const router = useRouter();
+  const handleGetStarted = () => {
+    console.log("Get Started");
+    router.push("/register");
+  };
+
+  const cards = [
+    {
+      title: "INVOICE",
+      description:
+        "Create and send an unlimited number of fully customizable invoices directly from your account.",
+      image: "/SolutionSection_Image1.png",
+    },
+    {
+      title: "INTEGRATIONS",
+      description:
+        "From Stripe to Shopify, integrate with multiple apps to manage everything from one place.",
+      image: "/SolutionSection_Image2.png",
+    },
+    {
+      title: "PARTNER PERKS",
+      description:
+        "Save thousands on tools like Gusto and Hubspot with exclusive perks.",
+      image: "/SolutionSection_Image1.png",
+    },
+    {
+      title: "SUPPORT",
+      description:
+        "Our support team is available 24/7 to assist with any inquiries.",
+      image: "/SolutionSection_Image2.png",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  return (
+    <div
+      id="solution-section"
+      className="relative my-8 px-4 sm:px-8 py-16 bg-white overflow-hidden"
+    >
+      {/* Animated Background Elements */}
+      <motion.div
+        className="absolute top-[-50px] left-[-50px] w-32 h-32 bg-[#008A20] rounded-full opacity-20 filter blur-2xl"
+        animate={{ scale: [1, 1.3, 1], rotate: [0, 360, 0] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-[-50px] right-[-50px] w-48 h-48 bg-[#000D03] rounded-full opacity-20 filter blur-2xl"
+        animate={{ scale: [1, 1.2, 1], rotate: [0, -360, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Header Section */}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mb-8 flex flex-col sm:flex-row justify-between items-center"
+      >
+        <div className="text-2xl sm:text-3xl text-center sm:text-left font-bold">
+          <div>OUR SOLUTION MAKES IT EASIER</div>
+          <div>FOR YOU IN ALL TRANSACTIONS</div>
+        </div>
+        <div className="flex gap-4 items-center mt-4 sm:mt-0">
+          <FontAwesomeIcon
+            icon={faArrowLeft}
+            className="swiper-button-prev-custom text-black bg-gray-200 rounded-full px-4 py-1 cursor-pointer text-2xl"
+          />
+          <FontAwesomeIcon
+            icon={faArrowRight}
+            className="swiper-button-next-custom bg-[#008A20] text-white rounded-full px-4 py-1 cursor-pointer text-2xl"
+          />
+        </div>
+      </motion.div>
+
+      {/* Swiper Carousel */}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={20}
+        loop={true}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        navigation={{
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        }}
+        modules={[Navigation, Pagination]}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {cards.map((card, index) => (
+          <SwiperSlide key={index}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className={`p-8 h-80 rounded-xl transition-all duration-300 flex flex-col justify-between ${
+                index === activeIndex
+                  ? "bg-[#008A20] text-white shadow-xl"
+                  : "bg-gray-200 text-gray-800"
+              }`}
+            >
+              <div>
+                <div
+                  className={`border rounded-full text-center px-3 py-2 w-40 mx-auto ${
+                    index === activeIndex
+                      ? "border-white text-white"
+                      : "border-gray-500 text-gray-700"
+                  }`}
+                >
+                  {card.title}
+                </div>
+                <div className="text-2xl my-4 text-center font-semibold">
+                  {card.title}
+                </div>
+                <div
+                  className={`text-xs text-center ${
+                    index === activeIndex ? "text-gray-200" : "text-gray-500"
+                  }`}
+                >
+                  {card.description}
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="mt-4 rounded-xl max-h-28 object-contain"
+                />
+              </div>
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* CTA Banner Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col sm:flex-row justify-around my-20 gap-8 items-center"
+      >
+        <div className="text-2xl sm:text-3xl text-center sm:text-left w-full sm:w-96 font-bold">
+          ALL IN ONE MONEY MANAGEMENT
+        </div>
+        <div className="max-w-xl text-gray-400 text-center sm:text-left">
+          Running a business is complicated enough. Your banking solution should
+          be simple—and help simplify. Spend less time managing your finances and
+          more time running your business with Novo.
+        </div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handleGetStarted}
+          className="flex gap-2 max-sm:m-auto border border-gray-300 rounded-full px-4 py-1 items-center text-lg transition-all duration-200"
+        >
+          <img src="/Arrow.png" alt="Arrow" className="w-8" />
+          <div>Get Started</div>
+        </motion.button>
+      </motion.div>
+    </div>
+  );
+}
+
+export default SolutionSection;
