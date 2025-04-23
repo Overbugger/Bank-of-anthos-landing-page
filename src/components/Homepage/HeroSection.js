@@ -52,7 +52,7 @@ function HeroSection() {
           >
             Banking You Can
             
-            <span className="mx-1"> Believe  <Icons.underline className="pointer-events-none absolute inset-x-0 -bottom-6 text-[#008A20] w-44" /> </span>
+            <span className="mx-1 text-[#008A20]"> Believe  <Icons.underline className="pointer-events-none absolute inset-x-0 -bottom-6 text-[#008A20] w-44" /> </span>
              
               In{" "}
           </div>
@@ -90,7 +90,7 @@ function HeroSection() {
         </div>
 
         {/* Middle Column: Hero Image & Info Cards */}
-        <div className="w-full lg:w-[60%] flex justify-end rounded-3xl relative h-[300px] lg:h-[500px] bg-[#f2f2f2]">
+        <div className="w-full lg:w-[60%] flex justify-end rounded-3xl relative h-[300px] lg:h-[500px]">
         <Image
     src="/fine-girl.jpg"
     alt="HeroImage"

@@ -10,44 +10,45 @@ import { FaCreditCard } from "react-icons/fa";
 // Original feature list
 const features = [
   {
-    title: "Access Your Card at any time",
+    title: "Banking Access, Reinvented",
     description:
-      "Every Nova checking account comes with a free physical debit card and virtual debit, so you always have access at your fingertips.",
+      "Your Bank of Anthos account includes both a classic debit card and a secure virtual version — because convenience should never come at the cost of trust.",
   },
   {
-    title: "Make Your Money Work for You",
+    title: "Savings with Purpose",
     description:
-      "Invest your money efficiently with Nova's automated savings features.",
+      "Let your money grow the old-fashioned way — reliably and responsibly — backed by smart, modern tools that automate your financial goals.",
   },
   {
-    title: "Pay and get paid your way",
+    title: "Payments Made Simple",
     description:
-      "Send and receive payments seamlessly with no hidden fees.",
+      "Send and receive money with ease. Whether across town or across borders, Bank of Anthos keeps it secure and seamless — with no hidden fees.",
   },
   {
-    title: "Free from hidden fees",
+    title: "Honest Banking, Always",
     description:
-      "With Nova, enjoy transparent banking without worrying about hidden charges.",
+      "Built on a legacy of integrity, Bank of Anthos charges no hidden fees — just transparent service you can believe in.",
   },
 ];
+
 
 // New testimonial data for carousel section
 const testimonials = [
   {
     quote:
-      "Nova transformed the way I manage my business finances. The interface is both beautiful and intuitive!",
+      "Bank of Anthos transformed the way I manage my business finances. The interface is both beautiful and intuitive!",
     author: "Alex D.",
     role: "Entrepreneur",
   },
   {
     quote:
-      "The security and ease of use have made Nova my go-to banking solution. I highly recommend it!",
+      "The security and ease of use have made Bank of Anthos my go-to banking solution. I highly recommend it!",
     author: "Maria S.",
     role: "Freelancer",
   },
   {
     quote:
-      "A seamless experience from sign-up to everyday banking. Nova’s features are exactly what I needed.",
+      "A seamless experience from sign-up to everyday banking. Bank of Anthos's features are exactly what I needed.",
     author: "John K.",
     role: "Small Business Owner",
   },
@@ -140,31 +141,35 @@ function FeatureSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: isLeftInView ? 1 : 0, x: isLeftInView ? 0 : -50 }}
           transition={{ duration: 0.5 }}
-          className="h-[450px] relative w-[40%] max-sm:w-full flex gap-2 bg-white rounded-xl p-10 shadow-lg overflow-hidden"
+          className=" relative w-[40%] max-sm:w-full flex gap-2 bg-white rounded-xl p-10 shadow-lg overflow-hidden"
         >
           {/* Background overlay pattern */}
           <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-20"></div>
           <div className="w-64 relative z-10">
-            <div className="h-40"></div>
-            <div className="text-4xl font-bold">
-              ONLINE BANKING THAT TAKES YOUR BUSINESS TO THE{" "}
-              <span className="text-[#008A20]">NEXT LEVEL</span>
-            </div>
-            <div className="text-sm text-gray-400 mt-6">
-              Monitor all your purchases in one place, and freeze or unfreeze
-              your cards in a few taps.
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-6 px-6 py-2 bg-[#008A20] text-white rounded-full shadow-md"
-            >
-              Learn More
-            </motion.button>
-          </div>
+  {/* <div className="h-40"></div> */}
+
+  <div className="text-4xl font-bold text-black/70 leading-tight">
+    MODERN BANKING, <br />
+    ROOTED IN 
+    <p className="px-1 text-[#008A20]">TRUST</p>
+  </div>
+
+  <div className="text-sm text-gray-500 mt-6">
+    At Bank of Anthos, we blend timeless banking values with next-gen tools — so you can manage, monitor, and secure your money with confidence.
+  </div>
+
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="mt-6 px-6 py-2 bg-[#008A20] text-white rounded-full shadow-md"
+  >
+    Learn More
+  </motion.button>
+</div>
+
           <div className="flex items-end z-10">
             <img
-              src="/FeatureSection_Image1.png"
+              src="/handshake.jpg"
               alt="Feature showcasing online banking"
               className="rounded-xl w-52 max-sm:hidden"
             />
@@ -180,7 +185,7 @@ function FeatureSection() {
             x: isRightInView ? 0 : 50,
           }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-[55%] bg-[#F6F6F6] rounded-xl shadow-md"
+          className="w-full lg:w-[55%] rounded-xl shadow-md"
         >
           <div className="flex text-lg">
             <div className="bg-white py-4 px-8 rounded-tl-xl flex justify-center">
@@ -188,7 +193,7 @@ function FeatureSection() {
                 BENEFITS
               </div>
             </div>
-            <div className="bg-[#F6F6F6] flex flex-wrap max-sm:gap-1 gap-4 w-full px-4 rounded-tr-xl">
+            {/* <div className="bg-[#F6F6F6] flex flex-wrap max-sm:gap-1 gap-4 w-full px-4 rounded-tr-xl">
               {["Invoice", "Integration", "Partner Perks", "Nova Boost"].map(
                 (item) => (
                   <div key={item} className="py-2">
@@ -198,7 +203,7 @@ function FeatureSection() {
                   </div>
                 )
               )}
-            </div>
+            </div> */}
           </div>
 
           <div className="bg-white w-full p-8 rounded-b-xl space-y-6">
@@ -256,11 +261,10 @@ function FeatureSection() {
             <div>
               <div className="flex gap-2 text-2xl items-center">
                 <RiShieldCheckFill className="text-[#008A20] text-3xl" />
-                <span>FDIC insured</span>
+                <span>NDIC insured</span>
               </div>
               <div className="text-sm text-gray-500 mt-2 max-w-xs">
-                Your deposits are insured for up to $250,000 through our
-                partner bank, Middlesex Federal Savings.
+              Your money is insured up to &#8358;250,000 through our partner bank — so every transfer, deposit, or withdrawal is backed by real protection.
               </div>
             </div>
           </div>
@@ -295,7 +299,7 @@ function FeatureSection() {
             className="h-48 sm:h-64 object-contain"
           />
           <img
-            src="/FeatureSection_Image3.png"
+            src="/people-at-ban.jpg"
             alt="Feature Image 3"
             className="h-48 sm:h-64 object-contain max-sm:hidden"
           />
@@ -304,26 +308,66 @@ function FeatureSection() {
 
       {/* New Call-to-Action (CTA) Card */}
       <motion.div
-        className="mt-16 bg-gradient-to-r from-[#008A20] to-[#000D03] rounded-xl p-10 max-w-3xl mx-auto shadow-2xl text-white flex flex-col items-center"
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to elevate your banking experience?
-        </h2>
-        <p className="mb-6 text-center">
-          Join thousands of savvy business owners who trust Nova for secure,
-          seamless, and innovative banking.
-        </p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-8 py-3 bg-white text-[#008A20] rounded-full font-semibold"
-        >
-          Get Started Today
-        </motion.button>
-      </motion.div>
+  className="mt-16 bg-gradient-to-br from-[#008A20] to-green-800 rounded-xl p-10 max-w-3xl mx-auto shadow-2xl text-white flex flex-col items-center relative overflow-hidden"
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+>
+  {/* Abstract decorative elements */}
+  <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2" />
+  <div className="absolute bottom-0 left-0 w-40 h-40 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2" />
+  
+  {/* Subtle pattern overlay */}
+  <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiNjZmQiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')]" />
+
+
+  <motion.h2 
+    className="text-4xl font-bold mb-2 text-center"
+    initial={{ y: 20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 0.2 }}
+  >
+    Ready to elevate your banking experience?
+  </motion.h2>
+  
+  <motion.div 
+    className="w-16 h-1 bg-white bg-opacity-50 rounded-full mb-6"
+    initial={{ width: 0 }}
+    animate={{ width: 64 }}
+    transition={{ delay: 0.4, duration: 0.5 }}
+  />
+  
+  <motion.p 
+    className="mb-8 text-center text-lg leading-relaxed font-light max-w-lg"
+    initial={{ y: 20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 0.3 }}
+  >
+    Join thousands of savvy business owners who trust Bank of Anthos for secure,
+    seamless, and innovative banking solutions tailored to your needs.
+  </motion.p>
+  
+  <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
+    <motion.button
+      whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-8 py-4 bg-white text-green-700 rounded-full font-semibold shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto"
+    >
+      <span>Get Started Today</span>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+      </svg>
+    </motion.button>
+    
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold w-full sm:w-auto"
+    >
+      Learn More
+    </motion.button>
+  </div>
+</motion.div>
 
       {/* New Testimonials Carousel Section */}
       <TestimonialSlider />
