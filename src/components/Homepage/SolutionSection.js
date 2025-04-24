@@ -143,7 +143,7 @@ function SolutionSection() {
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="mt-4 rounded-xl max-h-28 object-contain"
+                  className="mt-4 rounded-xl max-h-28 object-contain sm:max-h-24"
                 />
               </div>
             </motion.div>
@@ -176,7 +176,7 @@ function SolutionSection() {
               <span className="text-[#00A025]">MANAGEMENT</span>
             </div>
 
-            <div className="text-white mb-2 text-center sm:text-left">
+            <div className="text-white mb-2 text-center sm:text-left text-sm sm:text-base">
               Running a business is complicated enough. Your banking solution
               should be simple and help you focus on what matters.
             </div>
@@ -189,9 +189,11 @@ function SolutionSection() {
             <h3 className="font-semibold text-xl mb-3 text-[#008A20]">
               Simplified Banking
             </h3>
-            Spend less time managing your finances and more time running your
-            business with Bank of Anthos. Our comprehensive tools help you track
-            expenses, manage cash flow, and plan for growth.
+            <p className="text-sm sm:text-base">
+              Spend less time managing your finances and more time running your
+              business with Bank of Anthos. Our comprehensive tools help you
+              track expenses, manage cash flow, and plan for growth.
+            </p>
           </div>
         </motion.div>
       </div>

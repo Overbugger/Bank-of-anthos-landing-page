@@ -30,7 +30,7 @@ function HeroSection() {
         <div className="w-full lg:w-[30%] relative px-4">
           <div
             className="text-[40px] lg:text-[50px] text-center sm:text-left leading-none absolute max-sm:relative w-full lg:w-[600px] z-20 
-              bg-clip-text text-transparent bg-black/70 font-extrabold"
+              bg-clip-text text-transparent bg-black/70 font-extrabold max-sm:text-[30px]"
           >
             Banking You Can
             <span className="mx-1 text-[#008A20]">
@@ -41,40 +41,31 @@ function HeroSection() {
             In{" "}
           </div>
           <div className="h-20 lg:h-32 max-sm:h-0"></div>
-          <div className="lg:pt-10 max-sm:pt-10 text-center lg:text-left pb-10 text-gray-400 text-sm lg:text-base">
+          <div className="lg:pt-10 max-sm:pt-10 text-center lg:text-left pb-10 text-gray-400 text-sm lg:text-base max-sm:text-xs">
             From daily spending to long-term saving, Bank of Anthos makes it
             simple, safe, and stress-free.
           </div>
           <div>
             <MainButton text="Get Started" />
-            {/* <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex gap-3 text-black rounded-full px-8 py-2 items-center mt-4 border border-gray-300 transition-all duration-200"
-              onClick={handleLiveChat}
-            >
-              <Image src="/Arrow.png" alt="Chat" className="w-7" />
-              <div>Live Chat</div>
-            </motion.button> */}
           </div>
         </div>
 
         {/* Middle Column: Hero Image & Info Cards */}
-        <div className="w-full lg:w-[60%] flex justify-end rounded-3xl relative h-[300px] lg:h-[500px]">
+        <div className="w-full lg:w-[60%] flex justify-end rounded-3xl relative h-[300px] lg:h-[500px] max-sm:h-[200px]">
           <Image
             src="/fine-girl.jpg"
             alt="HeroImage"
             fill
-            className="hidden lg:block w-full h-full object-cover rounded-3xl image-step"
+            className="hidden lg:block w-full h-full object-cover rounded-3xl image-step max-sm:rounded-lg"
           />
           <Image
             src="/fine-girl.jpg"
             alt="HeroImage"
             fill
-            className="w-full h-full object-cover rounded-3xl block lg:hidden"
+            className="w-full h-full object-cover rounded-3xl block lg:hidden max-sm:rounded-lg"
           />
           <motion.div
-            className="bg-gray-400/20 text-white backdrop-blur-sm border border-gray-100 rounded-2xl px-4 py-1 absolute top-24 left-8 lg:top-52 lg:left-32 flex gap-2 items-center justify-center"
+            className="bg-gray-400/20 text-white backdrop-blur-sm border border-gray-100 rounded-2xl px-4 py-1 absolute top-24 left-8 lg:top-52 lg:left-32 flex gap-2 items-center justify-center max-sm:top-16 max-sm:left-4"
             variants={fadeInFromLeft}
             initial="hidden"
             animate="visible"
@@ -84,15 +75,15 @@ function HeroSection() {
               alt="Naira"
               width={40}
               height={40}
-              className="h-8 lg:h-10"
+              className="h-8 lg:h-10 max-sm:h-6"
             />{" "}
             <div>
-              <div className="text-white">Account Balance</div>
-              <div className="text-xs">&#8358;170,500</div>
+              <div className="text-white max-sm:text-xs">Account Balance</div>
+              <div className="text-xs max-sm:text-[10px]">&#8358;170,500</div>
             </div>
           </motion.div>
           <motion.div
-            className="bg-gray-400/20 text-white backdrop-blur-sm border border-gray-100 rounded-2xl px-4 py-1 absolute top-40 right-5 lg:top-72 lg:right-10 flex gap-2 items-center justify-center"
+            className="bg-gray-400/20 text-white backdrop-blur-sm border border-gray-100 rounded-2xl px-4 py-1 absolute top-40 right-5 lg:top-72 lg:right-10 flex gap-2 items-center justify-center max-sm:top-28 max-sm:right-2"
             variants={fadeInFromRight}
             initial="hidden"
             animate="visible"
@@ -102,11 +93,11 @@ function HeroSection() {
               alt="Tick"
               width={40}
               height={40}
-              className="h-8 lg:h-10"
+              className="h-8 lg:h-10 max-sm:h-6"
             />
             <div>
-              <div className="text-white">Transfer</div>
-              <div className="text-xs">&#8358;90,000</div>
+              <div className="text-white max-sm:text-xs">Transfer</div>
+              <div className="text-xs max-sm:text-[10px]">&#8358;90,000</div>
             </div>
           </motion.div>
         </div>
@@ -118,15 +109,14 @@ function HeroSection() {
             alt="HeroImage"
             width={500}
             height={400}
-            className="rounded-2xl w-full h-auto"
+            className="rounded-2xl w-full h-auto max-sm:rounded-lg"
           />
           <div className="mt-8 flex items-center gap-4">
-            {/* <Image src="/Arrow.png" alt="HeroImage" className="h-16 lg:h-20" /> */}
             <div>
-              <div className="font-medium text-lg lg:text-xl text-nowrap">
+              <div className="font-medium text-lg lg:text-xl text-nowrap max-sm:text-base">
                 The Future of Safe Banking.{" "}
               </div>
-              <div className="text-sm mt-1 text-gray-500">
+              <div className="text-sm mt-1 text-gray-500 max-sm:text-xs">
                 Trusted by thousands across the country, Bank of Anthos blends
                 cutting-edge technology with uncompromising security. From
                 instant transfers to smart finance monitoring tools, we make
@@ -142,12 +132,12 @@ function HeroSection() {
 
       {/* Animated Scroll Down Indicator */}
       <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 max-sm:bottom-5"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
       >
         <svg
-          className="w-8 h-8 text-gray-500"
+          className="w-8 h-8 text-gray-500 max-sm:w-6 max-sm:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

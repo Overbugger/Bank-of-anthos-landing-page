@@ -141,50 +141,50 @@ function FeatureSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: isLeftInView ? 1 : 0, x: isLeftInView ? 0 : -50 }}
           transition={{ duration: 0.5 }}
-          className=" relative w-full lg:w-[40%] max-sm:w-full flex gap-2 bg-white rounded-xl p-10 shadow-lg overflow-hidden"
+          className="relative w-full lg:w-[40%] max-sm:w-full flex gap-2 bg-white rounded-xl p-10 shadow-lg overflow-hidden max-sm:p-6"
         >
           {/* Background overlay pattern */}
           <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-20"></div>
-          <div className="w-64 relative z-10">
-            <div className="text-4xl font-bold text-black/70 leading-tight">
+          <div className="w-64 relative z-10 max-sm:w-full">
+            <div className="text-4xl font-bold text-black/70 leading-tight max-sm:text-2xl">
               MODERN BANKING, <br />
               ROOTED IN
               <p className="px-1 text-[#008A20]">TRUST</p>
             </div>
 
-            <div className="text-sm text-gray-500 mt-6">
+            <div className="text-sm text-gray-500 mt-6 max-sm:mt-4">
               At Bank of Anthos, we blend timeless banking values with next-gen
               tools — so you can manage, monitor, and secure your money with
               confidence.
             </div>
 
-            <div className="my-5">
+            <div className="my-5 max-sm:my-3">
               <MainButton text={"Learn more"} />
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 items-end">
+          <div className="flex flex-col gap-2 items-end max-sm:items-center">
             <div>
               <img
                 src="/handshake.jpg"
                 alt="Feature showcasing online banking"
-                className="rounded-xl w-52 max-sm:hidden"
+                className="rounded-xl w-52 max-sm:w-32"
               />
             </div>
             <div className="">
               <img
                 src="/smiling-babe.png"
                 alt="Feature showcasing online banking"
-                className="rounded-xl w-52 max-sm:hidden"
+                className="rounded-xl w-52 max-sm:w-32"
               />
             </div>
             <div>
-            <img
-              src="/happy-couple.png"
-              alt="Feature showcasing online banking"
-              className="rounded-xl w-52 max-sm:hidden"
-            />
-          </div>
+              <img
+                src="/happy-couple.png"
+                alt="Feature showcasing online banking"
+                className="rounded-xl w-52 max-sm:w-32"
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -197,17 +197,17 @@ function FeatureSection() {
             x: isRightInView ? 0 : 50,
           }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-[55%] rounded-xl shadow-md"
+          className="w-full lg:w-[55%] rounded-xl shadow-md max-sm:p-4"
         >
           <div className="flex text-lg">
-            <div className="bg-white py-4 px-8 rounded-tl-xl flex justify-center">
-              <div className="bg-[#008A20] px-4 h-8 flex items-center rounded-full text-white">
+            <div className="bg-white py-4 px-8 rounded-tl-xl flex justify-center max-sm:px-4">
+              <div className="bg-[#008A20] px-4 h-8 flex items-center rounded-full text-white max-sm:text-sm">
                 BENEFITS
               </div>
             </div>
           </div>
 
-          <div className="bg-white w-full p-8 rounded-b-xl space-y-6">
+          <div className="bg-white w-full p-8 rounded-b-xl space-y-6 max-sm:p-4">
             {features.map((feature, index) => (
               <div key={index}>
                 <div
@@ -217,13 +217,13 @@ function FeatureSection() {
                   <motion.h3
                     className={`text-xl font-medium ${
                       expanded === index ? "text-[#008A20]" : "text-black"
-                    }`}
+                    } max-sm:text-lg`}
                   >
                     {feature.title}
                   </motion.h3>
                   <FontAwesomeIcon
                     icon={expanded === index ? faChevronUp : faChevronDown}
-                    className="text-gray-500 w-4"
+                    className="text-gray-500 w-4 max-sm:w-3"
                   />
                 </div>
 
@@ -236,7 +236,7 @@ function FeatureSection() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-sm text-gray-500 mt-2 w-96">
+                      <p className="text-sm text-gray-500 mt-2 w-96 max-sm:w-full">
                         {feature.description}
                       </p>
                     </motion.div>
@@ -255,16 +255,16 @@ function FeatureSection() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
         transition={{ duration: 0.8 }}
-        className="bg-white rounded-xl p-8 md:p-14 w-full mx-auto"
+        className="bg-white rounded-xl p-8 md:p-14 w-full mx-auto max-sm:p-6"
       >
-        <div className="flex flex-col md:flex-row items-center md:justify-around gap-8">
+        <div className="flex flex-col md:flex-row items-center md:justify-around gap-8 max-sm:gap-4">
           <div className="text-center flex items-center justify-center md:justify-start">
             <div>
-              <div className="flex gap-2 text-2xl items-center">
-                <RiShieldCheckFill className="text-[#008A20] text-3xl" />
+              <div className="flex gap-2 text-2xl items-center max-sm:text-xl">
+                <RiShieldCheckFill className="text-[#008A20] text-3xl max-sm:text-2xl" />
                 <span>NDIC insured</span>
               </div>
-              <div className="text-sm text-gray-500 mt-2 max-w-xs">
+              <div className="text-sm text-gray-500 mt-2 max-w-xs max-sm:text-xs">
                 Your money is insured up to &#8358;250,000,000 through our
                 partner bank — so every transfer, deposit, or withdrawal is
                 backed by real protection.
@@ -273,38 +273,38 @@ function FeatureSection() {
           </div>
 
           <div className="text-center">
-            <div className="flex gap-2 text-2xl items-center">
-              <MdLock className="text-[#008A20] text-3xl" />
+            <div className="flex gap-2 text-2xl items-center max-sm:text-xl">
+              <MdLock className="text-[#008A20] text-3xl max-sm:text-2xl" />
               <span>Powerful security</span>
             </div>
-            <div className="text-sm text-gray-500 mt-2 max-w-xs mx-auto md:mx-0">
+            <div className="text-sm text-gray-500 mt-2 max-w-xs mx-auto md:mx-0 max-sm:text-xs">
               Our bank-grade encryption ensures that your information remains
               safe and secure at all times.
             </div>
           </div>
 
           <div className="text-center md:text-left">
-            <div className="flex gap-2 text-2xl items-center">
-              <FaCreditCard className="text-[#008A20] text-3xl" />
+            <div className="flex gap-2 text-2xl items-center max-sm:text-xl">
+              <FaCreditCard className="text-[#008A20] text-3xl max-sm:text-2xl" />
               <span>Instant card controls</span>
             </div>
-            <div className="text-sm text-gray-500 mt-2 max-w-xs mx-auto md:mx-0">
+            <div className="text-sm text-gray-500 mt-2 max-w-xs mx-auto md:mx-0 max-sm:text-xs">
               Freeze or unfreeze your cards anytime with just a few taps through
               our mobile app.
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 w-full justify-center mt-10">
+        <div className="flex flex-col sm:flex-row gap-6 w-full justify-center mt-10 max-sm:gap-4">
           <img
             src="/FeatureSection_Image2.png"
             alt="Feature Image 2"
-            className="h-48 sm:h-64 object-contain hidden lg:block"
+            className="h-48 sm:h-64 object-contain hidden lg:block max-sm:h-32"
           />
           <img
             src="/people-at-ban.jpg"
             alt="Feature Image 3"
-            className="h-48 sm:h-64 object-contain max-sm:hidden rounded-3xl"
+            className="h-48 sm:h-64 object-contain max-sm:h-32 rounded-3xl"
           />
         </div>
       </motion.div>
@@ -314,12 +314,12 @@ function FeatureSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="mt-20 rounded-xl p-6 text-black/70 text-center shadow-xl w-full lg:w-1/2 mx-auto space-y-6"
+        className="mt-20 rounded-xl p-6 text-black/70 text-center shadow-xl w-full lg:w-1/2 mx-auto space-y-6 max-sm:p-4"
       >
-        <div className="text-2xl font-bold mb-4">
+        <div className="text-2xl font-bold mb-4 max-sm:text-xl">
           Ready to elevate your banking experience?
         </div>
-        <div className="mb-4 text-sm">
+        <div className="mb-4 text-sm max-sm:text-xs">
           Join thousands of savvy business owners who trust Bank of Anthos for
           secure, seamless, and innovative banking solutions tailored to your
           needs.{" "}
