@@ -5,7 +5,7 @@ steps:
 
   # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/group4-repo/anthos-landing']
+    args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/group4-repo/anthos-landing:latest']
 
   # Deploy container image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
