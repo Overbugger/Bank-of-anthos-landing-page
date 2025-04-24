@@ -28,3 +28,6 @@ images:
   - 'gcr.io/$PROJECT_ID/anthos-landing'
 
 timeout: '1800s'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
