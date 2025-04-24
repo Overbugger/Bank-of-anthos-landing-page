@@ -22,7 +22,7 @@ function StatsSection() {
       />
 
       <img
-        src="/StatsSection_Image1.png"
+        src="/enterprenuer.png"
         alt="Stats Visual"
         className="w-full lg:w-1/2 object-contain relative z-10"
       />
@@ -45,15 +45,13 @@ function StatsSection() {
           transition={{ duration: 0.8 }}
           className="text-3xl sm:text-4xl my-6 max-sm:text-center font-bold"
         >
-          FOR GROWING TEAMS AND THE SELF-EMPLOYED ALIKE
-        </motion.div>
+  BUILT FOR GROWING TEAMS AND INDEPENDENT PROFESSIONALS
+  </motion.div>
 
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center">
           <p className="text-gray-500 text-sm w-64 max-sm:text-center">
-            Whether you&apos;re just getting started or employ an established team,
-            Novo can help you get your business&apos;s finances in order. Here&apos;s how
-            small business customers have found success using Novo&apos;s powerful
-            digital banking tools.
+          From entrepreneurs taking their first step to businesses scaling new heights, Bank of Anthos offers the trusted financial tools you need — with modern control, legacy-grade reliability, and zero guesswork.
+
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -76,11 +74,11 @@ function StatsSection() {
             className="bg-[#e9e9e9] py-6 rounded-b-xl flex flex-wrap justify-around items-center gap-6"
           >
             <StatItem value={200000} label="CUSTOMERS" post={"+"} />
-            <StatItem value={0} label="MONTHLY FEE" pre={"$"} />
+            <StatItem value={0} label="MONTHLY FEE" pre={"₦"} />
             <StatItem
               value={500000000}
               label="FASTER PAYMENTS"
-              pre={"$"}
+              pre={"₦"}
               post={"+"}
             />
             <StatItem value={4.9} label="APP RATING" />
@@ -93,20 +91,21 @@ function StatsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-12 bg-gradient-to-r from-[#008A20] to-[#000D03] rounded-xl p-6 text-white text-center shadow-xl"
+          className="mt-12 rounded-xl p-6 text-black/70 text-center shadow-xl"
         >
           <div className="text-2xl font-bold mb-4">
             Join Thousands of Happy Customers
           </div>
           <div className="mb-4 text-sm">
-            Experience the simplicity and power of Novo's digital banking today.
+            Experience the simplicity and power of Bank of Anthos's digital banking today.
           </div>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="border border-white rounded-full px-6 py-2 text-lg"
+            className="flex gap-2 border mx-auto border-gray-300 rounded-full px-4 py-2 items-center text-lg transition-all duration-200"
           >
-            Get Started Now
+            <img src="/Arrow.png" alt="Arrow" className="w-6" />
+            <span>Get Started</span>
           </motion.button>
         </motion.div>
       </div>

@@ -32,11 +32,11 @@ function HeroSection() {
   return (
     <div className="relative overflow-hidden">
       {/* Animated Decorative Blobs */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-[-80px] left-[-80px] w-40 h-40 bg-[#008A20] rounded-full opacity-30 filter blur-3xl"
         animate={{ x: [0, 50, 0], y: [0, 50, 0] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-      />
+      /> */}
       <motion.div
         className="absolute bottom-[-80px] right-[-80px] w-56 h-56 bg-[#000D03] rounded-full opacity-30 filter blur-3xl"
         animate={{ x: [0, -50, 0], y: [0, -50, 0] }}
@@ -52,7 +52,7 @@ function HeroSection() {
           >
             Banking You Can
             
-            <span className="mx-1 text-[#008A20]"> Believe  <Icons.underline className="pointer-events-none absolute inset-x-0 -bottom-6 text-[#008A20] w-44" /> </span>
+            <span className="mx-1 text-[#008A20]"> Believe  <Icons.underline className="pointer-events-none absolute inset-x-0 -bottom-6 text-[#008A20] w-44 hidden lg:block" /> </span>
              
               In{" "}
           </div>
