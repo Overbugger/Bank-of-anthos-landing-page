@@ -25,12 +25,6 @@ function HeroSection() {
 
   return (
     <div className="relative overflow-hidden">
-      <motion.div
-        className="absolute bottom-[-80px] right-[-80px] w-56 h-56 bg-[#000D03] rounded-full opacity-30 filter blur-3xl"
-        animate={{ x: [0, -50, 0], y: [0, -50, 0] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-      />
-
       <div className="pb-28 px-20 max-sm:px-4 flex flex-col lg:flex-row gap-10 mt-10 relative z-10">
         {/* Left Column: Content & CTAs */}
         <div className="w-full lg:w-[30%] relative px-4">
@@ -46,13 +40,13 @@ function HeroSection() {
             </span>
             In{" "}
           </div>
-          <div className="h-32 max-sm:h-0"></div>
-          <div className="pt-10 max-sm:pt-10 max-sm:text-center pb-10 text-gray-400 text-sm lg:text-base">
+          <div className="h-20 lg:h-32 max-sm:h-0"></div>
+          <div className="lg:pt-10 max-sm:pt-10 text-center lg:text-left pb-10 text-gray-400 text-sm lg:text-base">
             From daily spending to long-term saving, Bank of Anthos makes it
             simple, safe, and stress-free.
           </div>
           <div>
-           <MainButton text="Get Started" />
+            <MainButton text="Get Started" />
             {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -71,7 +65,13 @@ function HeroSection() {
             src="/fine-girl.jpg"
             alt="HeroImage"
             fill
-            className="w-full h-full object-cover rounded-3xl image-step"
+            className="hidden lg:block w-full h-full object-cover rounded-3xl image-step"
+          />
+          <Image
+            src="/fine-girl.jpg"
+            alt="HeroImage"
+            fill
+            className="w-full h-full object-cover rounded-3xl block lg:hidden"
           />
           <motion.div
             className="bg-gray-400/20 text-white backdrop-blur-sm border border-gray-100 rounded-2xl px-4 py-1 absolute top-24 left-8 lg:top-52 lg:left-32 flex gap-2 items-center justify-center"
@@ -112,7 +112,7 @@ function HeroSection() {
         </div>
 
         {/* Right Column: Secondary Image & Feature Card */}
-        <div className="w-full lg:w-[30%] px-4">
+        <div className="w-full lg:w-[30%] px-4 hidden lg:block">
           <Image
             src="/better-bank.png"
             alt="HeroImage"

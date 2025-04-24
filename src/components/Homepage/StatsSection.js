@@ -25,7 +25,7 @@ function StatsSection() {
       <img
         src="/enterprenuer.png"
         alt="Stats Visual"
-        className="w-full lg:w-1/2 object-contain relative z-10"
+        className="w-full lg:w-1/2 object-contain relative z-10 rounded-xl hidden lg:block"
       />
 
       <div className="py-10 max-w-lg relative z-10">

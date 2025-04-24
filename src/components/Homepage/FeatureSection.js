@@ -141,7 +141,7 @@ function FeatureSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: isLeftInView ? 1 : 0, x: isLeftInView ? 0 : -50 }}
           transition={{ duration: 0.5 }}
-          className=" relative w-[40%] max-sm:w-full flex gap-2 bg-white rounded-xl p-10 shadow-lg overflow-hidden"
+          className=" relative w-full lg:w-[40%] max-sm:w-full flex gap-2 bg-white rounded-xl p-10 shadow-lg overflow-hidden"
         >
           {/* Background overlay pattern */}
           <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-20"></div>
@@ -163,28 +163,28 @@ function FeatureSection() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <div className="flex items-end z-10">
-              <img
-                src="/tech-bank.png"
-                alt="Feature showcasing online banking"
-                className="rounded-xl w-52 max-sm:hidden"
-              />
-            </div>
-            <div className="flex items-end z-10">
+          <div className="flex flex-col gap-2 items-end">
+            <div>
               <img
                 src="/handshake.jpg"
                 alt="Feature showcasing online banking"
                 className="rounded-xl w-52 max-sm:hidden"
               />
             </div>
-            {/* <div className="flex items-end z-10">
+            <div className="">
+              <img
+                src="/smiling-babe.png"
+                alt="Feature showcasing online banking"
+                className="rounded-xl w-52 max-sm:hidden"
+              />
+            </div>
+            <div>
             <img
-              src="/handshake.jpg"
+              src="/happy-couple.png"
               alt="Feature showcasing online banking"
               className="rounded-xl w-52 max-sm:hidden"
             />
-          </div> */}
+          </div>
           </div>
         </motion.div>
 
@@ -257,8 +257,8 @@ function FeatureSection() {
         transition={{ duration: 0.8 }}
         className="bg-white rounded-xl p-8 md:p-14 w-full mx-auto"
       >
-        <div className="flex flex-col md:flex-row md:justify-around gap-8">
-          <div className="text-center md:text-left flex items-center justify-center md:justify-start">
+        <div className="flex flex-col md:flex-row items-center md:justify-around gap-8">
+          <div className="text-center flex items-center justify-center md:justify-start">
             <div>
               <div className="flex gap-2 text-2xl items-center">
                 <RiShieldCheckFill className="text-[#008A20] text-3xl" />
@@ -272,7 +272,7 @@ function FeatureSection() {
             </div>
           </div>
 
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <div className="flex gap-2 text-2xl items-center">
               <MdLock className="text-[#008A20] text-3xl" />
               <span>Powerful security</span>
@@ -299,7 +299,7 @@ function FeatureSection() {
           <img
             src="/FeatureSection_Image2.png"
             alt="Feature Image 2"
-            className="h-48 sm:h-64 object-contain"
+            className="h-48 sm:h-64 object-contain hidden lg:block"
           />
           <img
             src="/people-at-ban.jpg"
@@ -314,7 +314,7 @@ function FeatureSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="mt-20 rounded-xl p-6 text-black/70 text-center shadow-xl w-1/2 mx-auto space-y-6"
+        className="mt-20 rounded-xl p-6 text-black/70 text-center shadow-xl w-full lg:w-1/2 mx-auto space-y-6"
       >
         <div className="text-2xl font-bold mb-4">
           Ready to elevate your banking experience?
