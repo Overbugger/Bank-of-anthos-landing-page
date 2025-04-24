@@ -19,30 +19,35 @@ function SolutionSection() {
 
   const cards = [
     {
-      title: "INVOICE",
+      badgeText: "INVOICING",
+      title: "SMART INVOICING",
       description:
-        "Create and send an unlimited number of fully customizable invoices directly from your account.",
+        "Send branded, professional invoices straight from your Bank of Anthos account, no extra tools needed. Fast. Secure. Reliable.",
       image: "/SolutionSection_Image1.png",
     },
     {
-      title: "INTEGRATIONS",
+      badgeText: "INTEGRATIONS",
+      title: "SEAMLESS INTEGRATIONS",
       description:
-        "From Stripe to Shopify, integrate with multiple apps to manage everything from one place.",
+        "Connect your Anthos account with platforms like Stripe, Shopify, and more. Run your finances without ever switching tabs.",
       image: "/SolutionSection_Image2.png",
     },
     {
-      title: "PARTNER PERKS",
+      badgeText: "BUSINESS PERKS",
+      title: "EXCLUSIVE BUSINESS PERKS",
       description:
-        "Save thousands on tools like Gusto and Hubspot with exclusive perks.",
+        "Gain access to exclusive savings on trusted tools like Gusto and Hubspot, designed to grow your business, not your expenses.",
       image: "/SolutionSection_Image1.png",
     },
     {
-      title: "SUPPORT",
+      badgeText: "SUPPORT",
+      title: "24/7 HUMAN SUPPORT",
       description:
-        "Our support team is available 24/7 to assist with any inquiries.",
+        "Get real help, anytime. Our dedicated support team is here day or night, no bots, just answers you can count on.",
       image: "/SolutionSection_Image2.png",
     },
   ];
+  
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -120,7 +125,7 @@ function SolutionSection() {
                       : "border-gray-500 text-gray-700"
                   }`}
                 >
-                  {card.title}
+                  {card.badgeText}
                 </div>
                 <div className="text-2xl my-4 text-center font-semibold">
                   {card.title}
@@ -157,18 +162,17 @@ function SolutionSection() {
         </div>
         <div className="max-w-xl text-gray-400 text-center sm:text-left">
           Running a business is complicated enough. Your banking solution should
-          be simple—and help simplify. Spend less time managing your finances and
-          more time running your business with Novo.
+          be simple and help simplify. Spend less time managing your finances and
+          more time running your business with Bank of Anthos.
         </div>
         <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={handleGetStarted}
-          className="flex gap-2 max-sm:m-auto border border-gray-300 rounded-full px-4 py-1 items-center text-lg transition-all duration-200"
-        >
-          <img src="/Arrow.png" alt="Arrow" className="w-8" />
-          <div>Get Started</div>
-        </motion.button>
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex gap-2 border mx-auto border-gray-300 rounded-full px-4 py-2 items-center text-lg transition-all duration-200"
+          >
+            <img src="/Arrow.png" alt="Arrow" className="w-6" />
+            <span>Get Started</span>
+          </motion.button>
       </motion.div>
     </div>
   );
