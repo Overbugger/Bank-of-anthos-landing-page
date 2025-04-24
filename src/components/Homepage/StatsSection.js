@@ -3,6 +3,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import MainButton from "../MainButton";
 
 function StatsSection() {
   return (
@@ -45,26 +46,24 @@ function StatsSection() {
           transition={{ duration: 0.8 }}
           className="text-3xl sm:text-4xl my-6 max-sm:text-center font-bold"
         >
-  BUILT FOR GROWING TEAMS AND INDEPENDENT PROFESSIONALS
-  </motion.div>
+          BUILT FOR GROWING TEAMS AND INDEPENDENT PROFESSIONALS
+        </motion.div>
 
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center">
           <p className="text-gray-500 text-sm w-64 max-sm:text-center">
-          From entrepreneurs taking their first step to businesses scaling new heights, Bank of Anthos offers the trusted financial tools you need — with modern control, legacy-grade reliability, and zero guesswork.
-
+            From entrepreneurs taking their first step to businesses scaling new
+            heights, Bank of Anthos offers the trusted financial tools you need
+            — with modern control, legacy-grade reliability, and zero guesswork.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex gap-2 border border-gray-300 rounded-full px-4 py-2 items-center text-lg transition-all duration-200"
-          >
-            <img src="/Arrow.png" alt="Arrow" className="w-6" />
-            <span>Learn More</span>
-          </motion.button>
+          <MainButton text="Learn more" />
         </div>
 
         <div className="mt-8">
-          <img src="/StatsSection_Image2.png" alt="Stats Graph" className="w-full" />
+          <img
+            src="/StatsSection_Image2.png"
+            alt="Stats Graph"
+            className="w-full"
+          />
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -91,22 +90,18 @@ function StatsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-12 rounded-xl p-6 text-black/70 text-center shadow-xl"
+          className="mt-12 rounded-xl p-6 text-black/70 text-center"
         >
           <div className="text-2xl font-bold mb-4">
             Join Thousands of Happy Customers
           </div>
           <div className="mb-4 text-sm">
-            Experience the simplicity and power of Bank of Anthos's digital banking today.
+            Experience the simplicity and power of Bank of Anthos's digital
+            banking today.
           </div>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex gap-2 border mx-auto border-gray-300 rounded-full px-4 py-2 items-center text-lg transition-all duration-200"
-          >
-            <img src="/Arrow.png" alt="Arrow" className="w-6" />
-            <span>Get Started</span>
-          </motion.button>
+          <div className="flex items-center justify-center">
+            <MainButton text="Get Started" />
+          </div>{" "}
         </motion.div>
       </div>
     </motion.div>

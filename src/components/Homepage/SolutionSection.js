@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import MainButton from "../MainButton";
+import Image from "next/image";
 
 function SolutionSection() {
   const router = useRouter();
@@ -47,7 +49,6 @@ function SolutionSection() {
       image: "/SolutionSection_Image2.png",
     },
   ];
-  
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -151,29 +152,49 @@ function SolutionSection() {
       </Swiper>
 
       {/* CTA Banner Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="flex flex-col sm:flex-row justify-around my-20 gap-8 items-center"
-      >
-        <div className="text-2xl sm:text-3xl text-center sm:text-left w-full sm:w-96 font-bold">
-          ALL IN ONE MONEY MANAGEMENT
+      <div className="relative overflow-hidden rounded-xl my-12">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/tech-bank.png"
+            alt="Banking technology background"
+            fill
+            className="object-cover brightness-95"
+            priority
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
-        <div className="max-w-xl text-gray-400 text-center sm:text-left">
-          Running a business is complicated enough. Your banking solution should
-          be simple and help simplify. Spend less time managing your finances and
-          more time running your business with Bank of Anthos.
-        </div>
-        <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex gap-2 border mx-auto border-gray-300 rounded-full px-4 py-2 items-center text-lg transition-all duration-200"
-          >
-            <img src="/Arrow.png" alt="Arrow" className="w-6" />
-            <span>Get Started</span>
-          </motion.button>
-      </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 flex flex-col sm:flex-row justify-between items-center p-8 sm:p-12 gap-8"
+        >
+          <div className="flex flex-col gap-5 sm:max-w-md">
+            <div className="text-3xl sm:text-4xl text-center text-white sm:text-left font-bold">
+              ALL IN ONE MONEY{" "}
+              <span className="text-[#00A025]">MANAGEMENT</span>
+            </div>
+
+            <div className="text-white mb-2 text-center sm:text-left">
+              Running a business is complicated enough. Your banking solution
+              should be simple and help you focus on what matters.
+            </div>
+            <div className="text-white">
+              <MainButton text="Get Started" />
+            </div>
+          </div>
+
+          <div className="bg-white bg-opacity-90 p-6 rounded-lg max-w-md text-gray-700 text-center sm:text-left shadow-lg">
+            <h3 className="font-semibold text-xl mb-3 text-[#008A20]">
+              Simplified Banking
+            </h3>
+            Spend less time managing your finances and more time running your
+            business with Bank of Anthos. Our comprehensive tools help you track
+            expenses, manage cash flow, and plan for growth.
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }
