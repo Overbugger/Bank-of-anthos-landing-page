@@ -62,7 +62,7 @@ function StatsSection() {
           <img
             src="/StatsSection_Image2.png"
             alt="Stats Graph"
-            className="w-full sm:w-3/4"
+            className="w-full"
           />
 
           <motion.div
