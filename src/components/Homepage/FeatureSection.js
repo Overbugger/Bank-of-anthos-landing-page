@@ -264,7 +264,7 @@ function FeatureSection() {
                 <span>NDIC insured</span>
               </div>
               <div className="text-sm text-gray-500 mt-2 max-w-xs">
-              Your money is insured up to &#8358;250,000 through our partner bank — so every transfer, deposit, or withdrawal is backed by real protection.
+              Your money is insured up to &#8358;250,000,000 through our partner bank — so every transfer, deposit, or withdrawal is backed by real protection.
               </div>
             </div>
           </div>
