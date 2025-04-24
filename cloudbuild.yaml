@@ -3,7 +3,14 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/anthos-landing', '.']
 
-  # Push the container image to Container Registry
+  # Tag the image for Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'tag'
+      - 'gcr.io/$PROJECT_ID/anthos-landing:latest'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/group4-repo/anthos-landing:latest'
+
+  # Push the container image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/group4-repo/anthos-landing:latest']
 
@@ -15,7 +22,7 @@ steps:
       - 'deploy'
       - 'anthos-landing'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/anthos-landing:latest'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/group4-repo/anthos-landing:latest' # Use the Artifact Registry path here
       - '--region'
       - 'us-central1'
       - '--platform'
@@ -25,7 +32,7 @@ steps:
       - '3000'
 
 images:
-  - 'gcr.io/$PROJECT_ID/anthos-landing:latest'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/group4-repo/anthos-landing:latest' # Update the image name here
 
 timeout: '1800s'
 
