@@ -96,7 +96,7 @@ function StatsSection() {
             Join Thousands of Happy Customers
           </div>
           <div className="mb-2 sm:mb-4 text-xs sm:text-sm">
-            Experience the simplicity and power of Bank of Anthos's digital
+            Experience the simplicity and power of Bank of Anthos&apos;s digital
             banking today.
           </div>
           <div className="flex items-center justify-center">

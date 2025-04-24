@@ -76,7 +76,7 @@ function TestimonialSlider() {
           className="bg-white rounded-xl p-8 shadow-md"
         >
           <p className="text-lg italic text-gray-700 mb-4">
-            "{testimonials[current].quote}"
+            &ldquo;{testimonials[current].quote}&rdquo;{" "}
           </p>
           <div className="text-right">
             <p className="font-bold text-gray-900">

@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
+RUN npm run build || exit 1
 
 # Stage 2: Create a minimal runtime image and copy necessary files
 FROM node:lts-alpine AS runner
@@ -20,6 +20,6 @@ COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/next.config.js ./
 
 EXPOSE 3000
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 CMD ["npm", "start"]
