@@ -237,7 +237,7 @@ const Index = () => {
   };
 
   return (
-    <div className="container mx-auto py-8 space-y-8 px-4 animate-fade-in">
+    <div className="container mx-auto p-10 space-y-8  animate-fade-in">
       <div className="flex flex-col space-y-2">
         <Select
           value={selectedSymbol}

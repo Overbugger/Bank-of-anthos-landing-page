@@ -5,6 +5,7 @@ import CustomChatbot from "./Chatbot";
 import { Icons } from "../Icons";
 import Image from "next/image";
 import MainButton from "../MainButton";
+import Link from "next/link";
 
 function HeroSection() {
   const [isChatbotVisible, setIsChatbotVisible] = useState(false);
@@ -47,6 +48,15 @@ function HeroSection() {
           </div>
           <div>
             <MainButton text="Get Started" />
+            {/* <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex gap-3 text-black rounded-full px-8 py-2 items-center mt-4 border border-gray-300 transition-all duration-200"
+              onClick={handleLiveChat}
+            >
+              <img src="/Arrow.png" alt="Chat" className="w-7" />
+              <div>Live Chat</div>
+            </motion.button> */}
           </div>
         </div>
 
@@ -103,9 +113,9 @@ function HeroSection() {
         </div>
 
         {/* Right Column: Secondary Image & Feature Card */}
-        <div className="w-full lg:w-[30%] px-4 hidden lg:block">
+        <div className="w-full lg:w-[30%] px-4">
           <Image
-            src="/better-bank.png"
+            src="/stock.jpg"
             alt="HeroImage"
             width={500}
             height={400}
@@ -114,15 +124,26 @@ function HeroSection() {
           <div className="mt-8 flex items-center gap-4">
             <div>
               <div className="font-medium text-lg lg:text-xl text-nowrap max-sm:text-base">
-                The Future of Safe Banking.{" "}
+                Modern Investing, Traditional Trust.{" "}
               </div>
-              <div className="text-sm mt-1 text-gray-500 max-sm:text-xs">
-                Trusted by thousands across the country, Bank of Anthos blends
-                cutting-edge technology with uncompromising security. From
-                instant transfers to smart finance monitoring tools, we make
-                managing your money effortless, efficient, and safe — wherever
-                you are.
+              <div className="text-sm mt-1 text-gray-500 max-sm:text-xs text-right">
+                With Bank of Anthos, monitoring your stock portfolio and market
+                movements has never been easier. Powered by industry-leading
+                security and built on a legacy of trust, our platform gives you
+                real-time insights, empowering you to make confident, informed
+                decisions, wherever your financial journey takes you.
               </div>
+
+              <Link href="/stock-market">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex gap-3 text-black rounded-full px-8 py-2 items-center mt-4 border border-gray-300 transition-all duration-200 justify-self-end"
+                >
+                  <img src="stock-icon.png" alt="Stock" className="w-10" />
+                  <div>View Stocks</div>
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>
