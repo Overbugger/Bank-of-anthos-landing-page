@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Providers from "@/components/Providers";
 
 export const metadata = {
   title: "Bank of Anthos",
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-[#FFF] overflow-x-hidden">
           <Navbar />
-          {children}
+          <Providers>
+            {children}
+          </Providers>
           <Footer />
       </body>
     </html>

@@ -6,7 +6,10 @@ import MainButton from "./MainButton";
 
 function Navbar() {
   const router = useRouter();
-  
+  const pathname = usePathname();
+
+  const isStock = pathname && pathname.startsWith("/stock-market");
+
 
   return (
     <div className={`top-0 left-0 w-full bg-white/70 z-50 p-4 lg:px-16 block`}>
@@ -29,9 +32,9 @@ function Navbar() {
           <p className="text-lg font-semibold">Bank of Anthos</p>
         </div>
 
-        <div className="hidden lg:flex gap-8 items-center">
+        {isStock || <div className="hidden lg:flex gap-8 items-center">
           <MainButton text="Get Started" />
-        </div>
+        </div>}
       </div>
     </div>
   );
