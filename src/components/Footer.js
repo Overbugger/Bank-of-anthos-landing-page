@@ -14,7 +14,7 @@ function Footer() {
             onClick={() => router.push("/")}
           >
             <img src="/favicon.png" alt="logo" className="w-8" />
-            <p className="text-lg font-semibold">Bank of Anthos</p>
+            <p className="text-lg text-[#008a20] font-semibold">Bank of Anthos</p>
           </div>
 
           <div>
